@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vaibhav.hpapp">
+
+    <uses-feature android:name="android permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android:hardware:camera" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginResultActivity" />
+        <activity android:name=".MenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PhoneActivity" />
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".RadioActivity" />
+        <activity android:name=".DealOfDayActivity" />
+        <activity android:name=".DealConfirmationActivity" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".AlertDialogActivity" />
+        <activity android:name=".MyOptionMenu" />
+        <activity android:name=".ProgressBarActivity" />
+        <activity android:name=".SeekBarActivity" />
+        <activity android:name=".ProximitySensor" />
+        <activity android:name=".Database" />
+
+        <receiver
+            android:name=".PhoneBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BootingBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".OrientationSensor" />
+        <activity android:name=".GPS" />
+
+        <service
+            android:name=".DemoService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ServiceDemoActivity" />
+        <activity android:name=".MusicActivity" />
+
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Navigation"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
